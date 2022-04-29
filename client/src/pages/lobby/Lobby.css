@@ -1,0 +1,41 @@
+.lobby {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.lobby__dim {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.lobby__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lobby__box > .MuiButton-root {
+  background-color: lightseagreen;
+  margin: 5px;
+  transition: all 0.5s;
+}
+
+.lobby__box > .MuiButton-root:hover {
+  filter: brightness(90%);
+  transform: scale(1.01);
+}
+
+.lobby__box .MuiSvgIcon-root {
+  color: white;
+}
+
+.lobby__searching {
+  position: absolute;
+  top: calc(50vh - 100px);
+  left: calc(50vw - 100px);
+  object-fit: contain;
+  width: 200px;
+  z-index: 2;
+}

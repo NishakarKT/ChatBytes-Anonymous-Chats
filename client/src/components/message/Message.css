@@ -1,0 +1,42 @@
+.message {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: lightseagreen;
+  background-color: white;
+  max-width: 70%;
+  padding: 5px 10px;
+  padding-right: 60px;
+  margin: 5px 20px;
+  border-radius: 5px;
+  animation: message__appear 0.3s ease-in 1;
+}
+
+.message__myText {
+  align-self: flex-end;
+  color: white;
+  background-color: lightseagreen;
+}
+
+.message__sender {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.message__text {
+  font-size: 15px;
+  word-break: break-all;
+}
+
+.message__time {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  font-size: 12px;
+}
+
+@keyframes message__appear {
+  from {
+    opacity: 0;
+  }
+}

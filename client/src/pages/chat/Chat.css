@@ -1,0 +1,134 @@
+.chat {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.chat__box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  height: 100vh;
+}
+
+.chat__box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: url("https://images.unsplash.com/photo-1519750783826-e2420f4d687f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60")
+    no-repeat center center / cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.chat__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  color: white;
+}
+
+.chat__head > p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.chat__head > .MuiButton-root {
+  color: white;
+  background-color: lightseagreen;
+  transition: all 0.5s;
+}
+
+.chat__head > .MuiButton-root:hover {
+  filter: brightness(90%);
+  transform: scale(1.01);
+}
+
+.chat__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.chat__body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.chat__body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.chat__foot {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding: 5px;
+}
+
+.chat__foot > input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: lightseagreen;
+  cursor: pointer;
+}
+
+.chat__foot > .MuiButton-root {
+  color: white;
+  background-color: lightseagreen;
+  transition: all 0.5s;
+}
+
+.chat__foot > .MuiButton-root:hover {
+  filter: brightness(90%);
+  transform: scale(1.01);
+}
+
+@media only screen and (max-width: 500px) {
+  .chat__box {
+    width: 100%;
+  }
+
+  .chat__foot > input {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 260px) {
+  .chat__foot > input {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 240px) {
+  .chat__foot > input {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 220px) {
+  .chat__foot > input {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  .chat__foot > input {
+    font-size: 10px;
+  }
+}
